@@ -68,6 +68,11 @@ When 0, no border is showed."
   :group 'transient-posframe
   :type 'string)
 
+(defcustom transient-posframe-refresh 10
+  "Interval to automatically resize the posframe."
+  :group 'transient-posframe
+  :type 'number)
+
 (defface transient-posframe
   '((t (:inherit default)))
   "Face used by the transient-posframe."
@@ -95,7 +100,8 @@ When 0, no border is showed."
 			   :min-height transient-posframe-min-height
 			   :internal-border-width transient-posframe-border-width
 			   :internal-border-color (face-attribute 'transient-posframe-border :background nil t)
-			   :override-parameters transient-posframe-parameters)))
+			   :override-parameters transient-posframe-parameters
+			   :refresh transient-posframe-refresh)))
       (frame-selected-window posframe))))
 
 (defun transient-posframe--delete ()
