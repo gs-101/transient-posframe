@@ -32,7 +32,7 @@
 (require 'transient)
 
 (defgroup transient-posframe nil
-  "Using posframe to show transient popups"
+  "Using posframe to show transient popups."
   :group 'transient
   :prefix "transient-posframe")
 
