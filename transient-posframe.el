@@ -91,6 +91,7 @@ When 0, no border is showed."
   (when (posframe-workable-p)
     (let* ((posframe
 	    (posframe-show buffer
+                           :height (with-current-buffer buffer (1- (count-screen-lines (point-min) (point-max))))
 			   :font transient-posframe-font
 			   :position (point)
 			   :poshandler transient-posframe-poshandler
